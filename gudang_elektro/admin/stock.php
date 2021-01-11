@@ -237,7 +237,7 @@
 									<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2"><span class="glyphicon glyphicon-plus"></span><i class="fa fa-plus-square"></i>&nbsp &nbsp Tambah Barang</button>
                                 </div>
                                     <div class="table-responsive">
-										 <table id="tes123" class="table table-hover"><thead class="thead-dark">
+                                        <table id="dataTable3" class="table table-hover"><thead class="thead-dark">
 											<tr>
                                                 <th>No</th>
                                                 <th>Qr Code</th>
@@ -247,9 +247,8 @@
 												<th>Kategori</th>
 												<th>Jumlah Stock</th>
                                                 <th>Lokasi</th>
-												<th></th>
-                                                <th>Opsi</th>
-                                                <th></th>
+												<th>Opsi</th>
+                                                
 											</tr></thead><tbody>
 											<?php
                                                 $sql = "SELECT * FROM stok_barang";
@@ -269,9 +268,9 @@
                                                     <td><?php echo mysqli_fetch_array(mysqli_query(connection(),"select content from detail_kategori where id_kategori=".$row['id_kategori']))[0] ?></td>
                                                     <td><?php echo $row['jumlah_stok']?></td>
                                                     <td><?php echo mysqli_fetch_array(mysqli_query(connection(),"select keterangan_lokasi from detail_lokasi where id_lokasi=".$row['id_lokasi']))[0] ?></td>
-                                                    <td><button data-toggle="modal" data-target="#edit<?=$idb;?>" class="tombol btn-warning"><i class="fa fa-pencil-square-o"></i>Edit</button></td>
-                                                    <td><button data-toggle="modal" data-target="#del<?=$idb;?>" class="tombol btn-danger"><i class="fa fa-trash-o"></i>Del</button></td>
-                                                    <td><button class="tombol btn-secondary"><a href="<?php echo "exportqrcode.php?qrcode=".$row['kode_barang']; ?>" target="_blank"><i class="fa fa-print"> Print</a></button></td>
+                                                    <td><button data-toggle="modal" data-target="#edit<?=$idb;?>" class="tombol btn-warning"><i class="fa fa-pencil-square-o"></i>Edit</button>
+                                                    <button data-toggle="modal" data-target="#del<?=$idb;?>" class="tombol btn-danger"><i class="fa fa-trash-o"></i>Del</button>
+                                                    <button class="tombol btn-secondary"><a href="<?php echo "exportqrcode.php?qrcode=".$row['kode_barang']; ?>" target="_blank"><i class="fa fa-print"> Print</a></button></td>
                                                 </td>
                                                 </tr>
 

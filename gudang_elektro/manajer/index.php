@@ -105,9 +105,12 @@ gtag('config', 'UA-144808195-1');
             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
-                        <ul class="metismenu" id="menu">
+                    <ul class="metismenu" id="menu">
                             <li class="active">
                                 <a href="index.php"><i class="fa fa-area-chart"></i><span>Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="user.php"><i class="ti-user"></i><span>Manajemen Pegawai</span></a>
                             </li>
                             <li>
                                 <a href="stock.php"><i class="ti-package"></i><span>Stock Barang</span></a>
@@ -122,9 +125,9 @@ gtag('config', 'UA-144808195-1');
                             </li>
                             <li>
                                 <a href="logout.php"><i class="ti-close"></i><span>Logout</span></a>
-
+                                
                             </li>
-
+                            
                         </ul>
                     </nav>
                 </div>
