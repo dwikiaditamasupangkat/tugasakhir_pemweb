@@ -29,7 +29,7 @@
     };
 
     if(isset($_POST['hapus'])){
-        $id_pegawai = $_POST['id_pegawai'];
+        $id_pegawai=$_POST['id_pegawai'];
 
         $delete = mysqli_query(connection(),"delete from logindata where id_pegawai='$id_pegawai'");
         
@@ -301,7 +301,7 @@
                                                             <!-- Modal body -->
                                                             <div class="modal-body">
                                                             Apakah Anda yakin ingin menghapus Data Pegawai ini?
-                                                            <input type="hidden" name="kode_barang" value="<?=$idb;?>">
+                                                            <input type="hidden" name="id_pegawai" value="<?=$idb;?>">
                                                             </div>
                                                             
                                                             <!-- Modal footer -->

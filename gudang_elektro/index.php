@@ -10,8 +10,6 @@ if(isset($_GET['pesan'])){
 		echo "Akses Ditutup";
 	}
 }
-
-
 ?>
 
 
